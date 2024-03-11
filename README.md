@@ -125,3 +125,5 @@ The final step is to load the data into Power BI. You can perform many more tran
 ![Local Image](images/Step18.png)
 
 # Build dashboard in Power BI
+![Local Image](images/Dashboard.png)
+![Local Image](images/DS2.png)
