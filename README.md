@@ -199,4 +199,4 @@ The final step is to load the data into Power BI. You can perform many more tran
 
 This was not the best Playing 11 of the T20WC-2022 but this was `MY-11` (personal) Favorite Playing 11 of the T20WC-2022. 
 
-![Local Image](images/PB4.png)
+![Local Image](images/PB2.png)
