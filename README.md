@@ -32,7 +32,7 @@ We will collect data for the 'My 11' project from specific [Sources](https://cod
     2. DataFrame Creation:
         The JSON data is converted into a Pandas DataFrame named `df_match` using pd.DataFrame().
 
-![Local Image](images/code1.png)
+![Local Image](images/Code1.png)
 
 ## Renaming Columns in DataFrame
 
