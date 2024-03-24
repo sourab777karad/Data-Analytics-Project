@@ -1,16 +1,76 @@
-# Data-Analytics-Project
+# MY-11
 
 Team 11 predictor on previous T20WC
 
 # Overview
 
-# Problem statement
+In my project called MY-11, I used Power BI and Python Pandas to analyze data from the T20 World Cup 2022. I cleaned up and organized the data to find important details about matches, teams, players, runs, and wickets. The main goal was to create a useful dashboard in Power BI that showed how teams performed, which players were most impactful, and how matches turned out. Additionally, I made a tool to predict the best Dream 11 fantasy cricket team based on these insights, helping users make smarter choices for their fantasy leagues.
 
 # Requirement scoping
 
+- Perform data analysis on the T20 World Cup 2022 dataset.
+- Cleaned and transformed dataset ready for analysis.
+
+* Include batting position filters for different player roles (e.g., opener, middle-order, finisher).
+* Ensure accurate and up-to-date data integration for player statistics.
+* Optimize dashboard performance for smooth user experience.
+* Conduct user testing to validate the ease of use and functionality of the "My 11" dashboard.
+* Provide documentation for project understanding and future maintenance.
+
 # Data Collection
 
+We will collect data for the 'My 11' project from specific [Sources](https://codebasics.io/resources) containing player details, match details (including match ID), batting summary, and bowling summary related to the T20 World Cup 2022. These sources provide detailed information on player attributes, match-specific data, batting performances, and bowling statistics. The collected data from these sources will be utilized to populate the 'My 11' dashboard in Power BI, facilitating user-friendly filtering and selection of the best cricket team based on batting position and available bowling summaries.
+
 # Data cleaning and transformation in Python Pandas
+
+    This report outlines the initial steps of data preprocessing for the 'My 11' project, specifically focusing on importing and creating a Pandas DataFrame from the T20 World Cup 2022 match results JSON file.
+
+## Data Import and DataFrame Creation
+
+    1. Data Import:
+        The code snippet reads the T20 World Cup match results data from a JSON file using the json.load() function.
+    2. DataFrame Creation:
+        The JSON data is converted into a Pandas DataFrame named `df_match` using pd.DataFrame().
+
+![Local Image](images/code1.png)
+
+## Renaming Columns in DataFrame
+
+    1. Renaming Columns:
+    The df_match DataFrame's 'scorecard' column was renamed to 'match_id' using the rename() method with inplace=True.
+
+![Local Image](images/Code2.png)
+
+## Creating Match IDs Dictionary
+
+        1. Creating Match IDs Dictionary:
+            A dictionary named match_ids_dict was created to map team matchups to their corresponding match IDs from the df_match DataFrame.
+
+![Local Image](images/Code3.png)
+
+## Data Transformation
+
+    1. Handling Dismissals:
+        * Created a new column 'out/not_out' based on whether a player was dismissed or not, using a  lambda function with apply().
+
+![Local Image](images/code4.png)
+
+    2. Dropping Columns:
+        * Removed the 'dismissal' column from the df_bat DataFrame using drop() with axis=1.
+
+    3. Cleaning Batsman Names:
+        Removed special characters ('â€' and '\xa0') from the 'batsmanName' column using replace() with lambda functions.
+
+![Local Image](images/code5.png)
+
+    4. Mapping Match IDs:
+        Mapped match IDs from match_ids_dict to the 'match' column in df_batting to associate batting statistics with match IDs.
+
+![Local Image](images/code6.png)
+
+## Conclusion
+
+The additional data cleaning and transformation steps successfully prepared the T20 World Cup batting summary data (df_batting) for further analysis and integration with other datasets. The cleaned DataFrame now contains relevant batting statistics, player dismissal status, and associated match IDs, facilitating comprehensive analysis and visualization in Power BI.
 
 # Data transformation in Power Query
 
@@ -125,5 +185,18 @@ The final step is to load the data into Power BI. You can perform many more tran
 ![Local Image](images/Step18.png)
 
 # Build dashboard in Power BI
+
 ![Local Image](images/Dashboard.png)
 ![Local Image](images/DS2.png)
+
+## Dashboard pictures
+
+![Local Image](images/PB1.png)
+
+![Local Image](images/PB4.png)
+
+![Local Image](images/PB13.png)
+
+This was not the best Playing 11 of the T20WC-2022 but this was `MY-11` (personal) Favorite Playing 11 of the T20WC-2022. 
+
+![Local Image](images/PB4.png)
