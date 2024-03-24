@@ -10,7 +10,6 @@ In my project called MY-11, I used Power BI and Python Pandas to analyze data fr
 
 - Perform data analysis on the T20 World Cup 2022 dataset.
 - Cleaned and transformed dataset ready for analysis.
-
 * Include batting position filters for different player roles (e.g., opener, middle-order, finisher).
 * Ensure accurate and up-to-date data integration for player statistics.
 * Optimize dashboard performance for smooth user experience.
